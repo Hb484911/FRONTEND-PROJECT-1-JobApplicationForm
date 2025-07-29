@@ -1,0 +1,177 @@
+/* Custom styles for Inter font and body overflow */
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #F8FAFC; /* Softer background */
+}
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e2e8f0; /* Lighter track */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #94A3B8; /* Muted thumb */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748B; /* Darker on hover */
+}
+
+/* Custom styles for the logo placeholder */
+.logo-placeholder {
+    display: flex;
+    align-items: center;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 800; /* font-extrabold */
+    color: #ffffff;
+    line-height: 1;
+}
+.logo-placeholder svg {
+    margin-right: 0.5rem; /* space-x-2 */
+    width: 2.5rem; /* h-10 */
+    height: 2.5rem; /* w-10 */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    z-index: 60; /* Above navMenu for clickability */
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(4) {
+    top: 16px;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+
+.hamburger.active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(4) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+
+/* Mobile Navigation Menu Styles */
+#navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 75%; /* Adjust as needed */
+    max-width: 300px; /* Limit width on larger screens */
+    height: 100%;
+    background-color: #1A202C; /* Dark background for mobile menu */
+    color: white;
+    padding-top: 80px; /* Space for header */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    transition: right 0.3s ease-in-out;
+    z-index: 50; /* Below hamburger, above content */
+    display: flex; /* Use flex for vertical centering of links */
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to start */
+    align-items: flex-start; /* Align links to left */
+}
+
+#navMenu.active {
+    right: 0; /* Slide in */
+}
+
+#navMenu ul {
+    width: 100%; /* Ensure ul takes full width of navMenu */
+    padding: 0;
+    margin: 0;
+}
+
+#navMenu ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Separator */
+}
+
+#navMenu ul li:last-child {
+    border-bottom: none;
+}
+
+#navMenu ul li a {
+    display: block;
+    padding: 1rem 1.5rem; /* Larger touch targets */
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 500;
+    color: #E2E8F0; /* Lighter text for contrast */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#navMenu ul li a:hover {
+    background-color: #2D3748; /* Darker on hover */
+    color: #ffffff;
+}
+
+/* Overlay for when menu is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40; /* Below navMenu */
+    display: none; /* Hidden by default */
+}
+.overlay.active {
+    display: block;
+}
+
+/* Custom alert animation keyframes */
+@keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-down {
+    animation: fade-in-down 0.3s ease-out forwards;
+}
+@keyframes fade-out-up {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+}
+.animate-fade-out-up {
+    animation: fade-out-up 0.3s ease-in forwards;
+}

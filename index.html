@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIPROMA INFOTECH - Job Application</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header Section -->
+      <header
+        class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white p-4 shadow-xl relative z-50"
+      >
+        <div
+          class="container mx-auto flex justify-between items-center px-4 py-2"
+        >
+          <!-- Logo Placeholder -->
+          <div class="logo-placeholder">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="h-8 w-8 text-blue-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.75 3.104v5.666m0 0a3.001 3.001 0 01-2.25 2.894m2.25-2.894v5.666m0 0a3.001 3.001 0 00-2.25 2.894m2.25-2.894v5.666m0 0a3.001 3.001 0 01-2.25 2.894m2.25-2.894v.008m0-.008a3.001 3.001 0 002.25 2.894m-2.25-2.894v5.666m0 0a3.001 3.001 0 012.25 2.894m-2.25-2.894v.008m0-.008a3.001 3.001 0 002.25 2.894M12 21.75c-5.16 0-9.75-3.96-9.75-9.75S6.84 2.25 12 2.25s9.75 3.96 9.75 9.75-4.59 9.75-9.75 9.75z"
+              />
+            </svg>
+            <span>DIPROMA INFOTECH</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:block">
+            <ul class="flex space-x-8 text-lg font-medium">
+              <li>
+                <a
+                  href="#home"
+                  class="hover:text-blue-300 transition duration-300 rounded-md px-3 py-2 hover:bg-white hover:bg-opacity-10"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-blue-300 transition duration-300 rounded-md px-3 py-2 hover:bg-white hover:bg-opacity-10"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#careers"
+                  class="hover:text-blue-300 transition duration-300 rounded-md px-3 py-2 hover:bg-white hover:bg-opacity-10"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-blue-300 transition duration-300 rounded-md px-3 py-2 hover:bg-white hover:bg-opacity-10"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Hamburger Icon (Mobile) -->
+          <div class="md:hidden flex items-center">
+            <div id="hamburger" class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Mobile Navigation Menu -->
+      <nav id="navMenu" class="md:hidden">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Overlay for mobile menu -->
+      <div id="overlay" class="overlay"></div>
+
+      <!-- Main Content Area -->
+      <main class="flex-grow container mx-auto p-6 md:p-10 lg:p-12">
+        <!-- Hero Section -->
+        <section
+          id="home"
+          class="text-center mb-16 bg-white p-10 rounded-2xl shadow-xl border border-gray-200"
+        >
+          <h2
+            class="text-5xl md:text-6xl font-extrabold text-blue-800 mb-6 leading-tight"
+          >
+            Innovate. Grow. Succeed.
+          </h2>
+          <p
+            class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
+          >
+            At DIPROMA INFOTECH, we're building cutting-edge solutions and
+            shaping the future of technology. Join a team where your ideas
+            thrive and your career flourishes.
+          </p>
+          <a
+            href="#apply"
+            class="mt-8 inline-block bg-blue-600 text-white text-xl font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Apply Now
+          </a>
+        </section>
+
+        <!-- Job Application Form Section -->
+        <section
+          id="apply"
+          class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-200 max-w-4xl mx-auto"
+        >
+          <h3 class="text-4xl font-bold text-center text-blue-800 mb-10">
+            Your Journey Starts Here
+          </h3>
+
+          <form id="jobApplicationForm" class="space-y-8">
+            <!-- Full Name -->
+            <div>
+              <label
+                for="fullName"
+                class="block text-base font-semibold text-gray-700 mb-2"
+                >Full Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-600 focus:border-blue-600 sm:text-lg transition duration-200 placeholder-gray-400"
+              />
+            </div>
+
+            <!-- Email Address -->
+            <div>
+              <label
+                for="email"
+                class="block text-base font-semibold text-gray-700 mb-2"
+                >Email Address <span class="text-red-500">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-600 focus:border-blue-600 sm:text-lg transition duration-200 placeholder-gray-400"
+              />
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+              <label
+                for="phone"
+                class="block text-base font-semibold text-gray-700 mb-2"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-600 focus:border-blue-600 sm:text-lg transition duration-200 placeholder-gray-400"
+                placeholder="e.g., +1 (555) 123-4567"
+              />
+            </div>
+
+            <!-- Position Applying For -->
+            <div>
+              <label
+                for="position"
+                class="block text-base font-semibold text-gray-700 mb-2"
+                >Position Applying For
+                <span class="text-red-500">*</span></label
+              >
+              <select
+                id="position"
+                name="position"
+                required
+                class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-600 focus:border-blue-600 sm:text-lg transition duration-200 bg-white appearance-none pr-8 cursor-pointer"
+              >
+                <option value="">
+                  Select a position that matches your expertise
+                </option>
+                <option value="software-engineer">Software Engineer</option>
+                <option value="data-scientist">Data Scientist</option>
+                <option value="ux-designer">UX/UI Designer</option>
+                <option value="project-manager">Project Manager</option>
+                <option value="qa-engineer">QA Engineer</option>
+                <option value="devops-engineer">DevOps Engineer</option>
+                <option value="cloud-architect">Cloud Architect</option>
+                <option value="cybersecurity-analyst">
+                  Cybersecurity Analyst
+                </option>
+                <option value="technical-support">
+                  Technical Support Specialist
+                </option>
+                <option value="business-analyst">Business Analyst</option>
+                <option value="marketing-specialist">
+                  Marketing Specialist
+                </option>
+                <option value="human-resources">
+                  Human Resources Generalist
+                </option>
+                <option value="other">Other (Please specify in message)</option>
+              </select>
+            </div>
+
+            <!-- Resume Upload -->
+            <div>
+              <label
+                for="resume"
+                class="block text-base font-semibold text-gray-700 mb-2"
+                >Upload Resume <span class="text-red-500">*</span></label
+              >
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                required
+                class="mt-1 block w-full text-lg text-gray-600 file:mr-5 file:py-3 file:px-6 file:rounded-full file:border-0 file:text-lg file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 transition duration-200 cursor-pointer"
+              />
+              <p class="mt-2 text-sm text-gray-500">
+                Accepted formats: PDF, DOC, DOCX. Maximum file size: 5MB.
+              </p>
+            </div>
+
+            <!-- Cover Letter/Message -->
+            <div>
+              <label
+                for="message"
+                class="block text-base font-semibold text-gray-700 mb-2"
+                >Cover Letter / Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-600 focus:border-blue-600 sm:text-lg transition duration-200 placeholder-gray-400"
+                placeholder="Share your passion, experience, and what makes you a perfect fit for DIPROMA INFOTECH..."
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+              <button
+                type="submit"
+                class="w-full flex justify-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-xl font-bold text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-3 focus:ring-offset-2 focus:ring-blue-600 transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Submit Application
+              </button>
+            </div>
+          </form>
+
+          <!-- Success Message Modal (Hidden by default) -->
+          <div
+            id="successMessage"
+            class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50"
+          >
+            <div
+              class="bg-white p-10 rounded-2xl shadow-2xl max-w-md w-full text-center transform scale-95 opacity-0 transition-all duration-300 ease-out border border-green-300"
+            >
+              <svg
+                class="mx-auto h-20 w-20 text-green-600 mb-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              <h4 class="text-3xl font-bold text-green-800 mb-4">
+                Application Received!
+              </h4>
+              <p class="text-lg text-gray-700 mb-8">
+                Thank you for your interest in DIPROMA INFOTECH. We have
+                successfully received your application and will review it
+                shortly. We appreciate your patience!
+              </p>
+              <button
+                id="closeSuccessMessage"
+                class="bg-blue-700 text-white px-8 py-3 rounded-xl hover:bg-blue-800 transition duration-300 text-lg font-semibold"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="bg-gray-900 text-white p-8 text-center shadow-inner mt-16">
+        <div class="container mx-auto">
+          <p class="text-lg">
+            &copy; 2025 DIPROMA INFOTECH. All rights reserved.
+          </p>
+          <p class="text-md mt-3 opacity-80">
+            Innovating the future, one solution at a time. | Building careers,
+            shaping tomorrow.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
